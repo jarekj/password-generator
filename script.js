@@ -36,5 +36,6 @@ function generatePassword(length){
         password += chars.substring(randomNumber, randomNumber+1);
     }
     console.log(password)
+    if(!password) return "use checkboxes";
     return password;
 }
