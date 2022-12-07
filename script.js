@@ -14,8 +14,20 @@ btnGenerate.addEventListener('click', (e) => {
 
 
 function generatePassword(length){
-    let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-";
-    console.log(chars)
+    let lowercase = "abcdefghijklmnopqrstuvwxyz";
+    let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let numbers = "0123456789";
+    let symbols = "!@#$%^&*()_-";
+    let chars = "";
+    console.log("małe litery ", lowercaseCheckbox.checked)
+    console.log("wielkie litery ", uppercaseCheckbox.checked)
+    console.log("liczby ", numbersCheckbox.checked)
+    console.log("symbole ", symbolsCheckbox.checked)
+
+    if(lowercaseCheckbox.checked) chars += lowercase;
+    if(uppercaseCheckbox.checked) chars += uppercase;
+    if(numbersCheckbox.checked) chars += numbers;
+    if(symbolsCheckbox.checked) chars += symbols;
 
     let password = "";
 
