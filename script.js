@@ -5,6 +5,18 @@ const lowercaseCheckbox = document.querySelector('#lowercase');
 const uppercaseCheckbox = document.querySelector('#uppercase');
 const numbersCheckbox = document.querySelector('#numbers');
 const symbolsCheckbox = document.querySelector('#symbols');
+const lightbulb = document.querySelector('.lightbulb');
+const darklightbulb = document.querySelector('.darklightbulb');
+const container = document.querySelector('.container');
+
+const switchLight = function (){
+    lightbulb.classList.toggle('d-none');
+    darklightbulb.classList.toggle('d-none');
+    document.body.classList.toggle('bg-dark')
+    container.classList.toggle('bg-white')
+    container.classList.toggle('bg-secondary')
+    container.classList.toggle('text-white')
+}
 
 
 btnGenerate.addEventListener('click', (e) => {
@@ -17,6 +29,9 @@ inputPassword.addEventListener('click', (e)=>{
     navigator.clipboard.writeText(e.target.value)
     console.log(e.target.value);
 })
+
+lightbulb.addEventListener('click', switchLight)
+darklightbulb.addEventListener('click', switchLight)
 
 
 function generatePassword(length){
@@ -45,3 +60,4 @@ function generatePassword(length){
     if(!password) return "use checkboxes";
     return password;
 }
+
