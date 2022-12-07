@@ -1,6 +1,11 @@
 const btnGenerate = document.querySelector('#generate');
 const inputPassword = document.querySelector('#password');
 const passLength = document.querySelector('#length');
+const lowercaseCheckbox = document.querySelector('#lowercase');
+const uppercaseCheckbox = document.querySelector('#uppercase');
+const numbersCheckbox = document.querySelector('#numbers');
+const symbolsCheckbox = document.querySelector('#symbols');
+
 
 btnGenerate.addEventListener('click', (e) => {
     e.preventDefault();
