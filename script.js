@@ -12,6 +12,12 @@ btnGenerate.addEventListener('click', (e) => {
     inputPassword.value = generatePassword(passLength.value)
 })
 
+inputPassword.addEventListener('click', (e)=>{
+    e.target.select();
+    navigator.clipboard.writeText(e.target.value)
+    console.log(e.target.value);
+})
+
 
 function generatePassword(length){
     let lowercase = "abcdefghijklmnopqrstuvwxyz";
